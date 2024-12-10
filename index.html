@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Filete Travieso</title>
     <style>
-        /* Estilo general */
+       
         * {
             box-sizing: border-box;
         }
@@ -30,22 +30,20 @@
         }
 
         .header p {
-            font-size: 1rem;
+            font-size: 1.2rem;
             margin: 5px 0 0;
         }
 
         .topnav {
             display: flex;
-            flex-wrap: wrap;
             background-color: #000000;
-            padding: 10px;
         }
 
         .topnav a {
             flex: 1;
             text-align: center;
             color: #FFFFFF;
-            padding: 10px;
+            padding: 14px;
             text-decoration: none;
         }
 
@@ -56,21 +54,17 @@
 
         .row {
             display: flex;
-            flex-wrap: wrap;
             margin: 0;
-            padding: 10px;
-        }
-
-        .leftcolumn, .rightcolumn {
-            padding: 10px;
         }
 
         .leftcolumn {
-            flex: 70%; /* Ocupa el 70% en pantallas grandes */
+            flex: 70%; 
+            padding: 15px;
         }
 
         .rightcolumn {
-            flex: 30%; /* Ocupa el 30% en pantallas grandes */
+            flex: 30%; 
+            padding: 15px;
         }
 
         .card {
@@ -83,7 +77,7 @@
 
         img {
             max-width: 100%;
-            height: auto; /* Escala las imágenes según el contenedor */
+            height: auto; 
         }
 
         .footer {
@@ -93,41 +87,50 @@
             color: #FFFFFF;
         }
 
-        /* Estilo responsivo */
-        @media screen and (max-width: 800px) {
+        
+        @media screen and (max-width: 768px) {
+            .topnav {
+                flex-wrap: wrap; 
+            }
+
             .topnav a {
-                flex: 100%; /* Los enlaces ocupan todo el ancho */
-                text-align: left;
+                flex: 100%; 
+                padding: 10px;
+            }
+
+            .row {
+                flex-direction: column; 
             }
 
             .leftcolumn, .rightcolumn {
-                flex: 100%; /* Ambas columnas se apilan */
+                flex: 100%; 
+                padding: 10px;
             }
 
             .header h1 {
-                font-size: 2rem;
+                font-size: 2rem; 
             }
 
             .header p {
-                font-size: 0.9rem;
+                font-size: 1rem;
             }
         }
 
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width: 480px) {
             .header h1 {
                 font-size: 1.5rem;
             }
 
             .header p {
-                font-size: 0.8rem;
+                font-size: 0.9rem;
             }
 
             .topnav a {
                 font-size: 0.9rem;
+                padding: 8px;
             }
         }
-
-        </style>
+    </style>
     </head>
     <body>
         <div class="header">
