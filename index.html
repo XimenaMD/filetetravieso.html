@@ -1,145 +1,131 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>El Filete Travieso</title>
-        
-        <style>
-            * {
-                box-sizing: border-box;
-            }
-            body {
-                font-family: Arial, sans-serif;
-                padding: 10px;
-                background-color: #000000;
-                color: #000000;
-            }
-            .header {
-                padding: 30px;
-                text-align: center;
-                background-color: #823612;
-                color: #FFFFFF;
-                border-bottom: 2px solid #ddd;
-                font-family: Georgia, serif;
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Filete Travieso</title>
+    <style>
+        /* Estilo general */
+        * {
+            box-sizing: border-box;
+        }
 
-            }
-            .header h1 {
-                font-size: 50px;
-                margin: 0;
-                color: #FFFFFF;
-                
-            }
-            .header p {
-                font-size: 18px;
-                color: #FFFFFF;
-            }
-            .topnav {
-                overflow: hidden;
-                background-color: #black;
-                color: #FFFFFF;
-            }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+
+        .header {
+            padding: 20px;
+            text-align: center;
+            background-color: #823612;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .header p {
+            font-size: 1rem;
+            margin: 5px 0 0;
+        }
+
+        .topnav {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #000000;
+            padding: 10px;
+        }
+
+        .topnav a {
+            flex: 1;
+            text-align: center;
+            color: #FFFFFF;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: #000000;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .leftcolumn, .rightcolumn {
+            padding: 10px;
+        }
+
+        .leftcolumn {
+            flex: 70%; /* Ocupa el 70% en pantallas grandes */
+        }
+
+        .rightcolumn {
+            flex: 30%; /* Ocupa el 30% en pantallas grandes */
+        }
+
+        .card {
+            background-color: #FFF8DC;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border: 1px solid #FFD700;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto; /* Escala las imágenes según el contenedor */
+        }
+
+        .footer {
+            background-color: #fa9948;
+            text-align: center;
+            padding: 20px;
+            color: #FFFFFF;
+        }
+
+        /* Estilo responsivo */
+        @media screen and (max-width: 800px) {
             .topnav a {
-                float: left;
-                display: block;
-                color: #f2f2f2;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-            }
-            .topnav a:hover {
-                background-color: #ddd;
-                color: black;
-            }
-            .leftcolumn {
-               flex: 70%;
-            }
-            .rightcolumn {
-                flex: 30;
-
+                flex: 100%; /* Los enlaces ocupan todo el ancho */
+                text-align: left;
             }
 
-            .leftcolumn, .rightcolumn{
-                border: 1px solid #FFD700;
-                background-color: #FFF8DC;
-                border-radius: 10px;
-            }
-            .fakeimg {
-                background-color: #aaa;
-                width: 100%;
-                padding: 20px;
-                text-align: center;
-                color: white;
-                font-size: 18px;
-            }
-            .card {
-                background-color: white;
-                padding: 20px;
-                margin-top: 20px;
-                border: 1px solid #FFD700;
-                border-radius: 5px;
-            }
-            .row::after {
-                content: "";
-                display: table;
-                clear: both;
+            .leftcolumn, .rightcolumn {
+                flex: 100%; /* Ambas columnas se apilan */
             }
 
-            #RedesSociales {
-                height: auto;
-                overflow: hidden;
-                margin-bottom: 20px;
-                padding: 10px;
-                background-color: #f9f9f9;
-                border: 1px solid #ddd;
+            .header h1 {
+                font-size: 2rem;
             }
 
-            .footer {
-                padding: 20px;
-                text-align: center;
-                background-color: #fa9948;
-                color: #FFFFFF;
-                margin-top: 20px;
-                border-top: 5px solid #823612;
-                font-size: 18px; 
-                box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.5);
+            .header p {
+                font-size: 0.9rem;
             }
-            @media screen and (max-width: 800px) {
-                .topnav a {
-                    float: none;
-                    width: 100%;
-                }
-                .leftcolumn, .rightcolumn {
-                    width: 100%;
-                    padding: 0;
-                }
-            }
-            .social-icons {
-                display: flex;
-                justify-content: center;
-                gap: 20px;
-                margin-top: 10px;
+        }
+
+        @media screen and (max-width: 500px) {
+            .header h1 {
+                font-size: 1.5rem;
             }
 
-            .social-link {
-                display: inline-block;
-                width: 50px;
-                text-align: none;
+            .header p {
+                font-size: 0.8rem;
             }
 
-            .icon {
-                width: 100%;
-                height: auto;
+            .topnav a {
+                font-size: 0.9rem;
             }
-
-            .icon:hover {
-                transform: scale(1.2);
-            }
-            h2 {
-               color: #823612; 
-               text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);  
-            }
-
+        }
 
         </style>
     </head>
