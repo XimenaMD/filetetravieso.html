@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                font-family: Arial, sans-serif;
+                padding: 10px;
+                background-color: #000000;
+                color: #000000;
+            }
+            .header {
+                padding: 30px;
+                text-align: center;
+                background-color: #823612;
+                color: #FFFFFF;
+                border-bottom: 2px solid #ddd;
+                font-family: Georgia, serif;
+
+            }
+            .header h1 {
+                font-size: 50px;
+                margin: 0;
+                color: #FFFFFF;
+                
+            }
+            .header p {
+                font-size: 18px;
+                color: #FFFFFF;
+            }
+            .topnav {
+                overflow: hidden;
+                background-color: #black;
+                color: #FFFFFF;
+            }
+            .topnav a {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            .topnav a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+            .leftcolumn {
+                float: left;
+                width: 75%;
+            }
+            .rightcolumn {
+                float: left;
+                width: 25%;
+                background-color: #f1f1f1;
+                padding-left: 20px;
+            }
+
+            .leftcolumn, .rightcolumn{
+                border: 1px solid #FFD700;
+                background-color: #FFF8DC;
+                border-radius: 10px;
+            }
+            .fakeimg {
+                background-color: #aaa;
+                width: 100%;
+                padding: 20px;
+                text-align: center;
+                color: white;
+                font-size: 18px;
+            }
+            .card {
+                background-color: white;
+                padding: 20px;
+                margin-top: 20px;
+                border: 1px solid #FFD700;
+                border-radius: 5px;
+            }
+            .row::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            #RedesSociales {
+                height: auto;
+                overflow: hidden;
+                margin-bottom: 20px;
+                padding: 10px;
+                background-color: #f9f9f9;
+                border: 1px solid #ddd;
+            }
+
+            .footer {
+                padding: 20px;
+                text-align: center;
+                background-color: #fa9948;
+                color: #FFFFFF;
+                margin-top: 20px;
+                border-top: 5px solid #823612;
+                font-size: 18px; 
+                box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.5);
+            }
+            @media screen and (max-width: 800px) {
+                .topnav a {
+                    float: none;
+                    width: 100%;
+                }
+                .leftcolumn, .rightcolumn {
+                    width: 100%;
+                    padding: 0;
+                }
+            }
+            .social-icons {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                margin-top: 10px;
+            }
+
+            .social-link {
+                display: inline-block;
+                width: 50px;
+                text-align: none;
+            }
+
+            .icon {
+                width: 100%;
+                height: auto;
+            }
+
+            .icon:hover {
+                transform: scale(1.2);
+            }
+            h2 {
+               color: #823612; 
+               text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);  
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>EL FILETE TRAVIESO</h1>
+            <p>Los mejores cortes de carne para tu paladar</p>
+        </div>
+
+        <div class="topnav">
+            <a href="#home">Inicio</a>
+            <a href="#cortes">Estilo de Cortes</a>
+            <a href="#consejos">Tips</a>
+            <a href="https://ximenamd.github.io/catalogo.html/">Catálogo</a>
+            <a href="https://ximenamd.github.io/formulario_contactoo/" target="_blank" style="float:right;">Contacto</a>
+        </div>
+
+        <div> id="home">Contenido de la sección de Inicio</div>
+
+        <div class="row">
+            <div class="leftcolumn">
+                <div class="card" id="cortes">
+                    <h2>Estilo de Cortes</h2>
+                    <img src="img/carnes.jpg" alt="Cortes de carne" style="width:100%; height:auto;">
+                    <ul>
+                        <li><b>El solomillo</b> es uno de los cortes más reconocidos. Es una carne magra y que se presta para poder hacerla a la parrilla, plancha o meterla en el horno.</li>
+                        <li><b>Lomo alto</b> es una carne que se puede preparar igual que el solomillo y que resulta muy jugosa y tierna. Además, se caracteriza por tener poca grasa.</li>
+                        <li><b>Lomo bajo</b> se encuentra en la parte trasera y también es una carne jugosa e ideal si se buscan cortes con poca grasa.</li>
+                        <li><b>Tapilla</b>es un corte que se hace cerca de la cadera del animal y es una carne magra. Esta parte del animal se puede usar para asar y freír.</li>
+                        <li><b>La cadera</b> se puede utilizar en diferentes elaboraciones como para hacer al horno, freír o hacerla en filetes que podemos rebozar. Es una carne bastante tierna.</li>
+                        <li><b>Brazuelo</b> se usa como norma general para guisos y caldos. Se caracteriza por la presencia de nervios y porque necesita de una cocción larga para que quede perfecta. </li>
+                        <li><b>En la espaldilla</b> podemos diferenciar dos cortes distintos. Uno de ellos conocido como plana es de donde se saca lo que se conoce como solomillo del pobre. Esta pieza tiene bastante grasa.</li>
+                        <li><b>La costilla</b> es el corte más usado para asar pues la carne se encuentra pegada al hueso y la grasa que contiene le da un sabor increíble.</li>
+
+                    </ul>
+                </div>
+                <div class="card" id="consejos">
+                    <h2>Consejos de Preparación</h2>
+                    <h5>¡Saca el mejor sabor a tus cortes!</h5>
+                    <img src="img/preparado.jpg" alt="Preparación" style="width:100%; height:auto;">
+                    <h5>Técnicas de Preparación</h5>
+                    <h2>Marinado</h2>
+                    <p>Marinar la carne no solo añade sabor, si no que también ayuda a ablandar los cortes más duros. A continuación algunos consejos que serán de tu ayuda:</p>
+                    <p>1.- Utiliza una combinación de ácido (como vinagre o jugo de limón), aceite y especias.</p>
+                    <p>2.- Marina la carne en el refrigerador durante al menos 2 horas, o toda la noche para obtener mejores resultados.</p>
+                    <p>3.- Descarta el marinado usado para evitar la contaminación cruzada.</p>
+
+                    <h2>Salado y curado</h2>
+                    <p>El salado y curado son métodos tradicionales para preservar la carne y añadir sabor:</p>
+                    <p>1.-<b>Salado en Seco:</b> Frotar la carne con sal y especias y dejar reposar durante varias horas antes de cocinar.</p>
+                    <p>2.-<b>Curado Húmedo:</b> Sumergir la carne en una solución salina (salmuera) para mejorar la textura y sabor.</p>
+
+                    <h2>Técnicas de Cocción</h2>
+                    <p>Diferentes cortes de carne requieren distintas técnicas de cocción para resaltar lo mejor de cada uno.</p>
+                    <p><b>Asado:</b> Ideal para cortes grandes como el lomo y las costillas. Cocinar a fuego lento y constante asegura una carne tierna.</p>
+                    <p><b>Parrilla:</b> Perfecta para cortes delgados como chuletas y pechugas de pollo. Cocinar a fuego alto para sellar los jugos.</p>
+                    <p><b>Guisado:</b> Utilizado para cortes más duros como el pecho de res y los muslos de pollo. Cocinar lentamente en líquido para descomponer las fibras y obtener una carne tierna.</p>
+                    <p><b>Freído:</b> Ideal para panceta y alitas de pollo, proporcionando una textura crujiente y sabrosa.</p>
+
+                    <h5>Consejos Adicionales</h5>
+                    <h2>Temperatura de Carne</h2>
+                    <p>Carne de cerdo: 65°C</p>
+                    <p>Carne de res (punto medio): 60°C</p>
+
+                    <h2>Reposo de la carne</h2>
+                    <p style="text-align: justify;">Deja reposar la carne después de cocinarla para que los jugos se redistribuyan y la carne quede más jugosa. Generalmente, se recomienda dejar reposar la carne durante 5-10 minutos antes de cortarla.</p>
+
+                </div>
+            </div>
+
+            <div class="rightcolumn">
+                <div class="card">
+                    <h2>Nosotros</h2>
+                      <img src="img/logotipo.jpg" alt="Logotipo de El Filete Travieso" style="width:100%; height:auto;">
+                    <p style="text-align: justify;">En "El Filete Travieso" llevamos más de 10 años ofreciendo los mejores cortes de carne con la calidad y frescura que nuestros clientes merecen. Nuestra historia nace como un pequeño negocio familiar, fundado con el objetivo de brindar productos cárnicos de primera calidad y un servicio cálido que hiciera sentir a cada cliente como en casa. 
+                    Nos especializamos en una amplia variedad de estilo de cortes, como filetes, chuletas y costillas, seleccionados cuidadosamente para garantizar su frescura y sabor excepcional. Además, combinamos la tradición con la innovación al ofrecer consejos de preparación que transforman cualquier platillo en una experiencia culinaria única. No solo vendemos carne; compartimos nuestra pasión por la calidad, la tradición y el buen servicio. Nuestra misión es poner en la mesa de cada cliente productos que no solo nutran, sino que también reúnan a las familias en torno a momentos especiales. Hoy, seguimos comprometidos con nuestros valores de honestidad, trabajo duro y atención al detalle, porque creemos que cada corte cuenta una historia, y cada cliente es parte de la nuestra.</p>
+                </div>
+                    <div class="card" id="contacto">
+                    <h2>Contáctanos</h2>
+                       <p><strong>Tel:</strong> +52 229 456 7890</p>
+                       <p><strong>Email:</strong> Elfiletetravieso@outlook.com.mx</p>
+                       <p><strong>Dirección:</strong> Calle de los Filetes Finos #2560, Veracruz Ver, CP 91779</p>
+                       <p><strong>Horario:</strong> Lunes a Sábado: 9:00 AM - 8:00 PM</p>
+                </div>
+
+                <div class="card">
+                    <img src="img/promo.jpg" alt="Promociones" style="width:100%; height:auto;">
+                </div>
+
+                <div>
+                    <div class="card">
+                    <img src="img/diseño.jpg" alt="Diseño" style="width:100%; height:auto;"> 
+                </div>
+
+                <div class="card" id="RedesSociales"> 
+                    <h2>Encuentranos en tus redes sociales favoritas</h2>
+                    <div class="social icons">
+                        <a href="https://www.facebook.com/share/1Wsdveg1vJ/?mibextid=LQQJ4d" target="_blank" class="social-link">
+                            <img src="img/facebook-icon.png" alt="Facebook" class="icon">
+                        </a>
+
+                    <a href="https://www.instagram.com/elfiletetravieso/profilecard/?igsh=NDA5NXNteDBibDg5" target="_blank" class="social-link">
+                            <img src="img/instagram-icon.png" alt="Instagram" class="icon">
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>       
+
+
+
+        <div class="footer">
+            <h2>¡Atrevete a conocernos! Una vez que pruebas, es imposible no resistirse.</h2>
+        </div>
+    </body>
+</html>
