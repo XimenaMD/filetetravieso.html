@@ -6,12 +6,17 @@
             * {
                 box-sizing: border-box;
             }
+
             body {
                 font-family: Arial, sans-serif;
                 padding: 10px;
                 background-color: #000000;
                 color: #000000;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh; /* Hace que el cuerpo ocupe al menos el 100% de la altura */
             }
+
             .header {
                 padding: 30px;
                 text-align: center;
@@ -19,23 +24,25 @@
                 color: #FFFFFF;
                 border-bottom: 2px solid #ddd;
                 font-family: Georgia, serif;
-
             }
+
             .header h1 {
                 font-size: 50px;
                 margin: 0;
                 color: #FFFFFF;
-                
             }
+
             .header p {
                 font-size: 18px;
                 color: #FFFFFF;
             }
+
             .topnav {
                 overflow: hidden;
                 background-color: #000000;
                 color: #FFFFFF;
             }
+
             .topnav a {
                 float: left;
                 display: block;
@@ -44,14 +51,17 @@
                 padding: 14px 16px;
                 text-decoration: none;
             }
+
             .topnav a:hover {
                 background-color: #ddd;
                 color: black;
             }
+
             .leftcolumn {
                 float: left;
                 width: 75%;
             }
+
             .rightcolumn {
                 float: left;
                 width: 25%;
@@ -59,11 +69,12 @@
                 padding-left: 20px;
             }
 
-            .leftcolumn, .rightcolumn{
+            .leftcolumn, .rightcolumn {
                 border: 1px solid #FFD700;
                 background-color: #FFF8DC;
                 border-radius: 10px;
             }
+
             .fakeimg {
                 background-color: #aaa;
                 width: 100%;
@@ -72,14 +83,16 @@
                 color: white;
                 font-size: 18px;
             }
+
             .card {
                 background-color: white;
                 padding: 20px;
                 margin-top: 20px;
-                margin-bottom 20px;
+                margin-bottom: 20px;
                 border: 1px solid #FFD700;
                 border-radius: 5px;
             }
+
             .row::after {
                 content: "";
                 display: table;
@@ -100,21 +113,24 @@
                 text-align: center;
                 background-color: #fa9948;
                 color: #FFFFFF;
-                margin-top: 20px;
+                margin-top: auto;  /* Empuja el pie de página al fondo */
                 border-top: 5px solid #823612;
-                font-size: 18px; 
+                font-size: 18px;
                 box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.5);
             }
+
             @media screen and (max-width: 800px) {
                 .topnav a {
                     float: none;
                     width: 100%;
                 }
+
                 .leftcolumn, .rightcolumn {
                     width: 100%;
                     padding: 0;
                 }
             }
+
             .social-icons {
                 display: flex;
                 justify-content: center;
@@ -136,11 +152,11 @@
             .icon:hover {
                 transform: scale(1.2);
             }
-            h2 {
-               color: #823612; 
-               text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);  
-            }
 
+            h2 {
+                color: #823612;
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            }
 
         </style>
     </head>
@@ -170,10 +186,9 @@
                         <li><b>Lomo bajo</b> se encuentra en la parte trasera y también es una carne jugosa e ideal si se buscan cortes con poca grasa.</li>
                         <li><b>Tapilla</b> es un corte que se hace cerca de la cadera del animal y es una carne magra. Esta parte del animal se puede usar para asar y freír.</li>
                         <li><b>La cadera</b> se puede utilizar en diferentes elaboraciones como para hacer al horno, freír o hacerla en filetes que podemos rebozar. Es una carne bastante tierna.</li>
-                        <li><b>Brazuelo</b> se usa como norma general para guisos y caldos. Se caracteriza por la presencia de nervios y porque necesita de una cocción larga para que quede perfecta. </li>
+                        <li><b>Brazuelo</b> se usa como norma general para guisos y caldos. Se caracteriza por la presencia de nervios y porque necesita de una cocción larga para que quede perfecta.</li>
                         <li><b>En la espaldilla</b> podemos diferenciar dos cortes distintos. Uno de ellos conocido como plana es de donde se saca lo que se conoce como solomillo del pobre. Esta pieza tiene bastante grasa.</li>
                         <li><b>La costilla</b> es el corte más usado para asar pues la carne se encuentra pegada al hueso y la grasa que contiene le da un sabor increíble.</li>
-
                     </ul>
                 </div>
                 <div class="card" id="consejos">
@@ -206,23 +221,21 @@
 
                     <h2>Reposo de la carne</h2>
                     <p style="text-align: justify;">Deja reposar la carne después de cocinarla para que los jugos se redistribuyan y la carne quede más jugosa. Generalmente, se recomienda dejar reposar la carne durante 5-10 minutos antes de cortarla.</p>
-
                 </div>
             </div>
 
             <div class="rightcolumn">
                 <div class="card">
                     <h2>Nosotros</h2>
-                      <img src="img/logotipo.jpg" alt="Logotipo de El Filete Travieso" style="width:100%; height:auto;">
-                    <p style="text-align: justify;">En "El Filete Travieso" llevamos más de 10 años ofreciendo los mejores cortes de carne con la calidad y frescura que nuestros clientes merecen. Nuestra historia nace como un pequeño negocio familiar, fundado con el objetivo de brindar productos cárnicos de primera calidad y un servicio cálido que hiciera sentir a cada cliente como en casa. 
-                    Nos especializamos en una amplia variedad de estilo de cortes, como filetes, chuletas y costillas, seleccionados cuidadosamente para garantizar su frescura y sabor excepcional. Además, combinamos la tradición con la innovación al ofrecer consejos de preparación que transforman cualquier platillo en una experiencia culinaria única. No solo vendemos carne; compartimos nuestra pasión por la calidad, la tradición y el buen servicio. Nuestra misión es poner en la mesa de cada cliente productos que no solo nutran, sino que también reúnan a las familias en torno a momentos especiales. Hoy, seguimos comprometidos con nuestros valores de honestidad, trabajo duro y atención al detalle, porque creemos que cada corte cuenta una historia, y cada cliente es parte de la nuestra.</p>
+                    <img src="img/logotipo.jpg" alt="Logotipo de El Filete Travieso" style="width:100%; height:auto;">
+                    <p style="text-align: justify;">En "El Filete Travieso" llevamos más de 10 años ofreciendo los mejores cortes de carne con la calidad y frescura que nuestros clientes merecen. Nuestra historia nace como un pequeño negocio familiar, fundado con el objetivo de brindar productos cárnicos de primera calidad y un servicio cálido que hiciera sentir a cada cliente como en casa. Nos especializamos en una amplia variedad de estilo de cortes, como filetes, chuletas y costillas, seleccionados cuidadosamente para garantizar su frescura y sabor excepcional. Además, combinamos la tradición con la innovación al ofrecer consejos de preparación que transforman cualquier platillo en una experiencia culinaria única. No solo vendemos carne; compartimos nuestra pasión por la calidad, la tradición y el buen servicio. Nuestra misión es poner en la mesa de cada cliente productos que no solo nutran, sino que también reúnan a las familias en torno a momentos especiales. Hoy, seguimos comprometidos con nuestros valores de honestidad, trabajo duro y atención al detalle, porque creemos que cada corte cuenta una historia, y cada cliente es parte de la nuestra.</p>
                 </div>
-                    <div class="card" id="contacto">
+                <div class="card" id="contacto">
                     <h2>Contáctanos</h2>
-                       <p><strong>Tel:</strong> +52 229 456 7890</p>
-                       <p><strong>Email:</strong> Elfiletetravieso@outlook.com.mx</p>
-                       <p><strong>Dirección:</strong> Calle de los Filetes Finos #2560, Veracruz Ver, CP 91779</p>
-                       <p><strong>Horario:</strong> Lunes a Sábado: 9:00 AM - 8:00 PM</p>
+                    <p><strong>Tel:</strong> +52 229 456 7890</p>
+                    <p><strong>Email:</strong> Elfiletetravieso@outlook.com.mx</p>
+                    <p><strong>Dirección:</strong> Calle de los Filetes Finos #2560, Veracruz Ver, CP 91779</p>
+                    <p><strong>Horario:</strong> Lunes a Sábado: 9:00 AM - 8:00 PM</p>
                 </div>
 
                 <div class="card">
@@ -231,32 +244,24 @@
 
                 <div>
                     <div class="card">
-                    <img src="img/diseño.jpg" alt="Diseño" style="width:100%; height:auto;"> 
-                </div>
+                        <img src="img/diseño.jpg" alt="Diseño" style="width:100%; height:auto;">
+                    </div>
 
-                <div class="card" id="RedesSociales"> 
-                    <h2>Encuentranos en tus redes sociales favoritas</h2>
-                    <div class="social icons">
-                        <a href="https://www.facebook.com/share/1Wsdveg1vJ/?mibextid=LQQJ4d" target="_blank" class="social-link">
-                            <img src="img/facebook-icon.png" alt="Facebook" class="icon">
-                        </a>
-
-                    <a href="https://www.instagram.com/elfiletetravieso/profilecard/?igsh=NDA5NXNteDBibDg5" target="_blank" class="social-link">
-                            <img src="img/instagram-icon.png" alt="Instagram" class="icon">
-
-                        </a>
+                    <div class="card" id="RedesSociales"> 
+                        <h2>Encuentranos en tus redes sociales favoritas</h2>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/share/1Wsdveg1vJ/?mibextid=LQQJ4d" class="social-link" target="_blank"><img src="img/facebook-icon.png" class="icon" alt="Facebook"></a>
+                            <a href="https://www.instagram.com/elfiletetravieso/profilecard/?igsh=NDA5NXNteDBibDg5" class="social-link" target="_blank"><img src="img/instagram-icon.png" class="icon" alt="Instagram"></a>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>       
-
-
+        </div>
 
         <div class="footer">
-            <h2>¡Atrevete a conocernos! Una vez que pruebas, es imposible no resistirse.</h2>
+            <p>Derechos reservados &copy; 2024 El Filete Travieso</p>
         </div>
     </body>
-</html>
-
 </html>
 
